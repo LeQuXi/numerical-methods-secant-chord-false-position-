@@ -23,7 +23,7 @@ def Secant(func, x0, x1):
         x1 = x2
         counter = counter + 1
 
-        if step > N:
+        if counter > N:
             print('No Root Found!')
             break
 
@@ -32,9 +32,9 @@ def Secant(func, x0, x1):
     return x2
 
 
-x1 = Secant(func, -68, 68)
+x1 = Secant(func, 0, 5)
 print('\n x = {0:.20f} f(x) = {1:.20f}'.format(x1, func(x1)))
-x = np.linspace(-68, 68, 100)
+x = np.linspace(0, 7, 100)
 y = func(x)
 plt.plot(x, y)
 plt.grid()
