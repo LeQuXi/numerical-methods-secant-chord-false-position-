@@ -41,11 +41,14 @@ def Secant(func, x0, x1):
 
 def TotalRoots(func, a1, a2, eps=1e-6):
     print ('The roots on the interval [%f, %f] are:' % (a1,a2))
+    #roots = []
     while 1:
         x1,x2 = SearchforRoots(func,a1,a2)
         if x1 != None:
             a1 = x2
             root = Secant(func,x1,x2)
+            plt.plot(root, func(root), markersize=7, marker='o')
+            #roots.appened(root) after all return array itself
             if root != None:
                 pass
                 print (round(root,-int(math.log(eps, 10))))
@@ -57,4 +60,4 @@ x = np.linspace(0, 5, 100)
 y = func(x)
 plt.plot(x, y)
 plt.grid()
-plt.plot(x1, func(x1), markersize=7, marker='o')
+plt.show()
