@@ -26,7 +26,7 @@ def Secant(func, x0, x1):
             break
 
         x2 = x0 - (x1 - x0) * func(x0) / (func(x1) - func(x0))
-        #print('Iteration-%d, x2 = %0.4f and f(x2) = %0.6f' % (counter, x2, func(x2)))
+        print('Iteration-%d, x2 = %0.4f and f(x2) = %0.6f' % (counter, x2, func(x2)))
         x0 = x1
         x1 = x2
         counter = counter + 1
