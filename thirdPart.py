@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-
+import  time  as tm
 def func(x):
   return -110*np.exp(15*x)+1;
 
@@ -29,10 +29,11 @@ def Secant(func, x0, x1):
     print('\n Exact root is: %0.8f' % x2)
     return x2
 
-Secant(func,0,110)
-x = np.linspace(-10, 10, 200)
+
+Secant(func,0,1)
+x = np.linspace(-10, 10, 100)
 y = func(x)
-plt.plot(x, y)
+plt.plot(-x, y)
 plt.grid()
 plt.show()
 
