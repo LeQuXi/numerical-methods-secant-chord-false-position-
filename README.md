@@ -1,1 +1,6 @@
-# numerical-methods-secant-chord-false-position-
+# numerical-methods
+  -secant
+  -chord
+  -solving systems of non-linear equation
+  -gaussian elimination method
+  -steepest gradient descent
